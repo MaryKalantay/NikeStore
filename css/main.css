@@ -141,6 +141,12 @@ button {
 .screen-diagonal.v-two::after {
   transform: skew(-260deg);
   left: 0;
+  width: 300%;
+}
+
+.screen-diagonal.v-three::after {
+  transform: skew(100deg);
+  left: 0;
   width: 300%
 }
   
@@ -361,6 +367,15 @@ header {
 
 .btn-left {
   margin-left:  12px;
+}
+
+button[disabled] {
+  opacity: .5;
+} 
+
+button[disabled]:after,
+button[disabled]:before {
+  display: none;
 }
 
 /* sections */
@@ -729,11 +744,16 @@ header {
 }
 
 
-/* login */
+/* login and registr */
 
 .login-form {
-  display: none;
+  display: flex;
   justify-content: flex-end;
+}
+
+.login-form.registr form {
+  width: 73.0667rem;
+  margin: 4rem auto;
 }
 
 .login-form form {
@@ -770,6 +790,15 @@ header {
 
 .inp-group input:first-child {
   border-right: none
+}
+
+.login-form .form-fields {
+  display: flex;
+  justify-content: space-between;
+} 
+
+.login-form .col {
+  width: 47.3%;
 }
 
 /* ==========================================================================

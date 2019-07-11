@@ -9,30 +9,26 @@ let new_user = {
 };
 console.log(new_user);
 
-let first_name = document.querySelector(".form-input[name=first_name]").value;
-let last_name = document.querySelector(".form-input[name=last_name]").value;
-let email = document.querySelector(".form-input[name=email]").value;
-let password_1 = document.querySelector(".form-input[name=pass_1]").value;
-let password_2 = document.querySelector(".form-input[name=pass_2").value;
-
 // Validation
-document.querySelector(".form-input[name=first_name]").addEventListener("change", Validation(first_name, 12));
+document.querySelector(".form-input[name=first_name]").addEventListener("input", Validation);
+document.querySelector(".form-input[name=last_name]").addEventListener("input", Validation);
+document.querySelector(".form-input[name=email]").addEventListener("input", Validation);
+document.querySelector(".form-input[name=pass_1]").addEventListener("input", Validation);
+document.querySelector(".form-input[name=pass_2]").addEventListener("input", Validation);
 
-function Validation(input, value) {
-  if (input != "" ) {
+function Validation() {
+  if (this.value != " " ) {
     document.getElementById("registr-submit").removeAttribute("disabled", "");
-    console.log("valid")
+    console.log("name is correct");
   }
-  else {
-    document.getElementById("registr-submit").setAttribute("disabled", "");
-    console.log("error")
-  }  
 }
 
-
-
-
 function Registration() {
+  let first_name = document.querySelector(".form-input[name=first_name]").value;
+  let last_name = document.querySelector(".form-input[name=last_name]").value;
+  let email = document.querySelector(".form-input[name=email]").value;
+  let password_1 = document.querySelector(".form-input[name=pass_1]").value;
+  let password_2 = document.querySelector(".form-input[name=pass_2").value;
   new_user.firstName = first_name, 
   new_user.lastName = last_name, 
   new_user. email = email, 
@@ -45,4 +41,5 @@ function Registration() {
 function ActionRegistrButton() {
   Registration();
 }
+
 document.getElementById("registr-submit").addEventListener("click", ActionRegistrButton) 

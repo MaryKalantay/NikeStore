@@ -746,17 +746,17 @@ button[disabled]:before {
 
 /* login and registr */
 
-.login-form {
+.forms {
   display: flex;
   justify-content: flex-end;
 }
 
-.login-form.registr form {
+.registr-form.form {
   width: 73.0667rem;
   margin: 4rem auto;
 }
 
-.login-form form {
+.form {
   background: white;
   width: 33.0667rem;
   margin-right: 10%;
@@ -764,7 +764,7 @@ button[disabled]:before {
   box-shadow: -1.6rem 1.6rem 0 0 rgba(255, 255, 255, 0.4);
 }
 
-.login-form input {
+.form input {
   height: 70px;
   background: #FFFFFF;
   border: 2px solid #82F4D3;
@@ -775,7 +775,7 @@ button[disabled]:before {
   letter-spacing: 1.25px;
 }
 
-.login-form .btn {
+.form .btn {
   margin: auto;
   padding: 1rem 3.5rem;
 }
@@ -789,16 +789,21 @@ button[disabled]:before {
 }
 
 .inp-group input:first-child {
-  border-right: none
+  margin-right: 1rem;
 }
 
-.login-form .form-fields {
+.form .form-fields {
   display: flex;
   justify-content: space-between;
 } 
 
-.login-form .col {
+.form .col {
   width: 47.3%;
+}
+
+.form-input:focus {
+  border-color: #151515;
+  transition: all .3s;
 }
 
 /* ==========================================================================

@@ -28,7 +28,6 @@ function Validation() {
   }
 }
 
-document.querySelector(".form-input").addEventListener("input", Validation);
 document.addEventListener('input', Validation);
 
 // Registration

@@ -90,6 +90,14 @@ button {
   padding: 1rem 3rem;
 }
 
+svg path {
+  fill: inherit;
+}
+
+svg path:hover {
+  fill: inherit;
+}
+
 @font-face {
   font-family: 'cormorant_garamondregular';
   src: url('../fonts/Cormorant_Garamond/cormorantgaramond-regular-webfont.woff2') format('woff2'),
@@ -194,11 +202,13 @@ header {
   justify-content: center;
   align-items: center;
   background: #151515;
+  fill: white;
   width: 3.7333rem;
   height: 3.7333rem;
   margin: 0.3333rem;
   border-radius: 50%;
   position: relative;
+  transition: all .2s;
 }
 
 .menu::after,
@@ -215,6 +225,17 @@ header {
 
 .menu::before {
   left: -5.1rem;
+}
+
+.menu:hover {
+  background:white;
+  fill: #82F4D3; 
+}
+
+.menu:hover::after,
+.menu:hover::before {
+  transition: all .2s;
+  border-color: white;
 }
 
 .menu svg {
@@ -268,8 +289,13 @@ header {
   z-index: 1;
 }
 
+.social li {
+  list-style: none;
+}
+
 .social a {
   background: #151515;
+  fill: white;
   width: 3.7333rem;
   height: 3.7333rem;
   margin: 0.7333rem;
@@ -277,10 +303,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .2s;
 }
 
-.social li {
-  list-style: none;
+.social a:hover {
+  background: white;
+  fill: #82F4D3;
+  transition: .2s;
 }
 
 /* buttons */
@@ -716,7 +745,7 @@ button[disabled]:before {
 }
 
 .footer-menu ul {
-  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .footer-menu ul li a {
@@ -725,24 +754,58 @@ button[disabled]:before {
 }
 
 .footer-content .sociality {
-  width: 45%
+  width: 45%;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-social a {
+  fill: #82F4D3;
+  margin-right: 25px;
+  transition: .3s;
+}
+
+.footer-social a:hover {
+  fill: #151515;
 }
 
 /* newsletter */
+.newsletter {
+  margin-bottom: 26px;
+}
+
+.newsletter p {
+  margin-bottom: 26px;
+}
+
 .newsletter input {
   box-shadow: 3.9px 3.1px 23.8px rgba(231, 231, 231, 0.75);
   height: 3.3333rem;
   padding: 0 1rem;
-  width: 30%;
+  width: 70%;
 }
+
+.newsletter button {
+  width: 29%;
+} 
 
 .footer-copyright {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-top: 1px solid #DBDBDB;
   padding: 2rem 0;
 }
 
+.footer-copyright div {
+  fill: #888
+}
+
+.footer-contactus {
+  color: #888;
+}
 
 /* login and registr */
 

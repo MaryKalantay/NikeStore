@@ -1,0 +1,26 @@
+[
+   {
+    "id": "1",
+    "name": "Nike shoes 1",
+    "price": "100",
+    "img": "img/popular-arrivals-1.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Nike shoes 2",
+    "price": "110",
+    "img": "img/popular-arrivals-2.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Nike shoes 3",
+    "price": "120",
+    "img": "img/popular-arrivals-3.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Nike shoes 4",
+    "price": "170",
+    "img": "img/popular-arrivals-14jpg"
+  }
+] 

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/js.cookie.js"></script>
   </head>
   <body>
     <div class="screen-diagonal v-first">
@@ -17,6 +18,16 @@
         <a href="index.html" class="logo">
           <img src="img/logo.svg">
         </a>
+
+        <!-- cart -->
+        <div class="holder-cart">
+          Your Cart <span id="cart-count">empty</span>
+        </div>
+        <ul id="goods" class="list-unstyled">
+      <!--     <img src="img/loading.gif" alt="" rel="nofollow"> -->
+        </ul>
+        <!-- /. cart -->
+
         <a href="login.html" class="menu">
           <svg width="18" height="15"><use xlink:href="#menu" /></svg>
         </a>
@@ -106,7 +117,9 @@
                 </picture>
                 <div class="popular-info">
                     <div class="name"><a href="#">Nike shoes</a> <span class="outdoors">Shop Outdoors</span></div>
-                    <div class="price">$ 125</div>
+                    <div class="price">$ 125 
+                    <a href="" class="add-cart"><svg width="25" height="27"><use  xlink:href="#cart" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a>
+                    </div>
                 </div>
               </li>
               <li class="popular-item">
@@ -122,7 +135,9 @@
                 </picture>
                 <div class="popular-info">
                     <div class="name"><a href="#">Nike shoes</a> <span class="outdoors">Shop Outdoors</span></div>
-                    <div class="price">$ 125</div>
+                    <div class="price">$ 125
+                      <a href="" class="add-cart"><svg width="25" height="27"><use  xlink:href="#cart" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a>                     
+                    </div>
                 </div>
               </li>
               <li class="popular-item">
@@ -138,7 +153,9 @@
                 </picture>
                 <div class="popular-info">
                   <div class="name"><a href="#">Nike shoes</a> <span class="outdoors">Shop Outdoors</span></div>
-                  <div class="price">$ 125</div>
+                  <div class="price">$ 125
+                    <a href="" class="add-cart"><svg width="25" height="27"><use  xlink:href="#cart" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a>                   
+                  </div>
                 </div>
               </li>
               <li class="popular-item">
@@ -154,7 +171,9 @@
                 </picture>
                 <div class="popular-info">
                   <div class="name"><a href="#">Nike shoes</a> <span class="outdoors">Shop Outdoors</span></div>
-                  <div class="price">$ 125</div>
+                  <div class="price">$ 125
+                    <a href="" class="add-cart"><svg width="25" height="27"><use  xlink:href="#cart" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a>                  
+                  </div>
                 </div>
               </li>
             </ul>
@@ -203,8 +222,8 @@
                   <span class="slide">Slide 5</span> -->
                 </div>
               </div>
-              <a id="prev" class="control prev"><svg><use xlink:href="#arrow-prev" /></svg></a>
-              <a id="next" class="control next"><svg><use xlink:href="#arrow-next" /></svg></a>
+              <a id="prev" class="control prev"><svg><use xlink:href="#arrow" /></svg></a>
+              <a id="next" class="control next"><svg><use xlink:href="#arrow" /></svg></a>
             </div>
           </div>              
         </div>
@@ -340,14 +359,13 @@
         <path d="M17.143 12.857a.72.72 0 0 0-.714-.714H.714a.72.72 0 0 0-.714.714v1.429c0 .39.324.714.714.714H16.43a.72.72 0 0 0 .714-.714v-1.429zm0-5.714a.72.72 0 0 0-.714-.714H.714A.72.72 0 0 0 0 7.143V8.57c0 .391.324.715.714.715H16.43a.72.72 0 0 0 .714-.715V7.143zm0-5.714a.72.72 0 0 0-.714-.715H.714A.72.72 0 0 0 0 1.43v1.428c0 .39.324.714.714.714H16.43a.72.72 0 0 0 .714-.714V1.43z" fill="#fff"/>
       </symbol>
 
-      <symbol id="arrow-prev" fill="none" viewBox="0 0 116 21" id=".5177051528859717" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="arrow" viewBox="0 0 116 21" id=".5177051528859717" xmlns="http://www.w3.org/2000/svg">
         <path opacity=".72" fill-rule="evenodd" clip-rule="evenodd" d="M31.486 1.512l.385.668-30.28 17.483-.386-.669 30.28-17.482z" fill="#999"/>
         <path opacity=".72" fill-rule="evenodd" clip-rule="evenodd" d="M114.999 18.945v.771H2.128v-.77h112.871z" fill="#999"/>
       </symbol>
 
-      <symbol id="arrow-next" fill="none" viewBox="0 0 116 21" id=".6831065463926513" xmlns="http://www.w3.org/2000/svg">
-        <path opacity=".72" fill-rule="evenodd" clip-rule="evenodd" d="M84.546 19.237l-.386-.668 30.28-17.482.386.668-30.28 17.482z" fill="#999"/>
-        <path opacity=".72" fill-rule="evenodd" clip-rule="evenodd" d="M1.032 1.804v-.771h112.871v.771H1.033z" fill="#999"/>
+      <symbol id="cart" viewBox="0 -31 512 512" id=".6537179691366768" xmlns="http://www.w3.org/2000/svg">
+        <path d="M166 300.004h271.004c6.71 0 12.598-4.438 14.414-10.883l60.004-210.004c1.289-4.527.406-9.39-2.434-13.152A15.034 15.034 0 0 0 497.004 60H131.37l-10.723-48.25A15 15 0 0 0 106 0H15C6.71 0 0 6.71 0 15c0 8.293 6.71 15 15 15h78.96l54.169 243.75C132.19 280.68 121 296.543 121 315.004c0 24.812 20.187 45 45 45h271.004c8.293 0 15-6.707 15-15 0-8.29-6.707-15-15-15H166c-8.262 0-15-6.723-15-15s6.738-15 15-15zm0 0M151 405.004c0 24.816 20.188 45 45.004 45 24.812 0 45-20.184 45-45 0-24.813-20.188-45-45-45-24.816 0-45.004 20.187-45.004 45zm0 0M362.004 405.004c0 24.816 20.187 45 45 45 24.816 0 45-20.184 45-45 0-24.813-20.184-45-45-45-24.813 0-45 20.187-45 45zm0 0"/>
       </symbol>
 
     </svg>     

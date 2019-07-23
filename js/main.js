@@ -52,3 +52,6 @@ document.getElementById("registr-submit").addEventListener("click", function(eve
   registerMessage();
   event.preventDefault();
 }, false);
+
+
+

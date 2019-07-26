@@ -47,7 +47,7 @@ function registerMessage() {
 } 
 
 // Action btn for registration
-document.getElementById("registr-submit").addEventListener("click", function(event) {
+document.querySelector("#registr-submit").addEventListener("click", function(event) {
   Registration();
   registerMessage();
   event.preventDefault();

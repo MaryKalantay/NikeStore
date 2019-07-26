@@ -1,0 +1,30 @@
+[
+   {
+       "id": "1",
+      "name": "Nike shoes One",
+      "price": "120",
+      "img": "img/popular-arrivals-1.jpg",
+      "btn": ""
+  },
+  {
+       "id": "2",
+      "name": "Nike shoes Two",
+      "price": "230",
+      "img": "img/popular-arrivals-1.jpg",
+      "btn": ""
+  },
+ {
+       "id": "3",
+      "name": "Nike shoes Three",
+      "price": "114",
+      "img": "img/popular-arrivals-1.jpg",
+      "btn": ""
+  },
+ {
+      "id": "4",
+      "name": "Nike shoes Four",
+      "price": "99",
+      "img": "img/popular-arrivals-1.jpg",
+      "btn": ""
+  }
+]

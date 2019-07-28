@@ -1,30 +1,30 @@
-[
-   {
+ {
+  "item1" : {
        "id": "1",
-      "name": "Nike shoes One",
+      "name": "Nike shoesOne",
       "price": "120",
       "img": "img/popular-arrivals-1.jpg",
       "btn": ""
   },
-  {
+  "item2" :{
        "id": "2",
-      "name": "Nike shoes Two",
+      "name": "Nike shoesTwo",
       "price": "230",
-      "img": "img/popular-arrivals-1.jpg",
+      "img": "img/popular-arrivals-2.jpg",
       "btn": ""
   },
- {
+  "item3" :{
        "id": "3",
-      "name": "Nike shoes Three",
+      "name": "Nike shoesThree",
       "price": "114",
-      "img": "img/popular-arrivals-1.jpg",
+      "img": "img/popular-arrivals-3.jpg",
       "btn": ""
   },
- {
+  "item4" :{
       "id": "4",
-      "name": "Nike shoes Four",
+      "name": "Nike shoesFour",
       "price": "99",
-      "img": "img/popular-arrivals-1.jpg",
+      "img": "img/popular-arrivals-4.jpg",
       "btn": ""
   }
-]
+}

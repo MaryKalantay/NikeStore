@@ -4,27 +4,27 @@
       "name": "Nike shoesOne",
       "price": "120",
       "img": "img/popular-arrivals-1.jpg",
-      "btn": ""
+      "link": "#"
   },
   "item2" :{
        "id": "2",
       "name": "Nike shoesTwo",
       "price": "230",
       "img": "img/popular-arrivals-2.jpg",
-      "btn": ""
+      "link": "#"
   },
   "item3" :{
        "id": "3",
       "name": "Nike shoesThree",
       "price": "114",
       "img": "img/popular-arrivals-3.jpg",
-      "btn": ""
+      "link": "#"
   },
   "item4" :{
       "id": "4",
       "name": "Nike shoesFour",
       "price": "99",
       "img": "img/popular-arrivals-4.jpg",
-      "btn": ""
+      "link": "#"
   }
 }

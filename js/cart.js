@@ -1,27 +1,43 @@
 // User Cart
 var cart = {};
 var sectionShoes = document.querySelector(".catalog-popular-arrivals");
-// var section = document.querySelector('section');
 
-var requestURL = "goods.json";
-console.log(requestURL)
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
+var arrShoes = {
+  "item1" : {
+       "id": "1",
+      "name": "Nike shoesOne",
+      "price": "120",
+      "img": "img/popular-arrivals-1.jpg",
+      "link": "#"
+  },
+  "item2" :{
+       "id": "2",
+      "name": "Nike shoesTwo",
+      "price": "230",
+      "img": "img/popular-arrivals-2.jpg",
+      "link": "#"
+  },
+  "item3" :{
+       "id": "3",
+      "name": "Nike shoesThree",
+      "price": "114",
+      "img": "img/popular-arrivals-3.jpg",
+      "link": "#"
+  },
+  "item4" :{
+      "id": "4",
+      "name": "Nike shoesFour",
+      "price": "99",
+      "img": "img/popular-arrivals-4.jpg",
+      "link": "#"
+  }
+}
 
-request.responseType = "json";
-request.send();
-console.log("Запрос:" + request);
-
-request.onload = function() {
-  var arrShoes = request.response;
-  console.log("Запрос:" + arrShoes);
-
-  var a = JSON.stringify(arrShoes);
+var a = JSON.stringify(arrShoes);
   console.log(a);
   var b = JSON.parse(a);
   console.log(b);
   popularArrivals(b);
-}
 
 function popularArrivals(jsonObj) {
   var catalogShoes = document.querySelector(".popular-list");
@@ -58,5 +74,27 @@ function addToCart() {
     console.log(cart)
   
 }
+
+
+// var requestURL = "js/goods.json";
+
+// console.log(requestURL)
+// var request = new XMLHttpRequest();
+// request.open('GET', requestURL);
+
+// request.responseType = "json";
+// request.send();
+// console.log("Запрос:" + request);
+
+// request.onload = function() {
+//   var arrShoes = request.response;
+//   console.log("Запрос:" + arrShoes);
+
+//   var a = JSON.stringify(arrShoes);
+//   console.log(a);
+//   var b = JSON.parse(a);
+//   console.log(b);
+//   popularArrivals(b);
+// }
 
 

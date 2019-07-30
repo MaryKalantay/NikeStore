@@ -1,8 +1,8 @@
 // User Cart
-var cart = {};
+var cart = [];
 var sectionShoes = document.querySelector(".catalog-popular-arrivals");
 
-var arrShoes = {
+var objShoes = {
   "item1" : {
        "id": "1",
       "name": "Nike shoesOne",
@@ -33,19 +33,20 @@ var arrShoes = {
   }
 }
 
-var a = JSON.stringify(arrShoes);
-  console.log(a);
-  var b = JSON.parse(a);
-  console.log(b);
-  popularArrivals(b);
+var a = JSON.stringify(objShoes);
+console.log(a);
+var b = JSON.parse(a);
+console.log(b);
+popularArrivals(b);
 
 function popularArrivals(jsonObj) {
+
   var catalogShoes = document.querySelector(".popular-list");
+
   for (key in jsonObj) {
     var item = document.createElement("li");
     item.classList = "popular-item";
     catalogShoes.appendChild(item);
-
     var markup = `
       <picture>
         <img src="${jsonObj[key].img}" alt="Popular Arrivals">
@@ -63,19 +64,27 @@ function popularArrivals(jsonObj) {
       </div>
     `;
     item.innerHTML = markup;
-    document.querySelector(".add-cart").addEventListener("click", addToCart);
+
+    // Add item to catr
+    
+    var anchors = document.getElementsByClassName("add-cart");
+    console.log(anchors);
+    for(var i = 0; i < anchors.length; i++) {
+      anchors[i].onclick = function() {
+        console.log(anchors[i]);
+      };
+    }
+    
   }
 }
 
-function addToCart() {
-  alert("+");
-    var dataItem = this.getAttribute("data-item");
-    cart[dataItem] = 1;
-    console.log(cart)
-  
+function addCart(item) {
+  // var dataItem = key;
+  //   cart.push(dataItem);
+    console.log( item);
+    // var cartCount = document.querySelector(".cart-count");
+    // cartCount.innerHTML = cart.length;
 }
-
-
 // var requestURL = "js/goods.json";
 
 // console.log(requestURL)

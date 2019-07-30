@@ -537,6 +537,17 @@ button[disabled]:before {
 
 .add-cart svg {
   margin-left: -3px;
+  width: 2rem;
+  height: 2rem;
+}
+
+.holder-cart {
+  font-size: 1.3rem;
+  color: #151515;
+}
+.cart-count {
+  font-weight: bold;
+  border-bottom: 1px dashed #111;
 }
 
 .popular-info .outdoors {

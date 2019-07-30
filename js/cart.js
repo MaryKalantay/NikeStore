@@ -71,19 +71,19 @@ function popularArrivals(jsonObj) {
     console.log(anchors);
     for(var i = 0; i < anchors.length; i++) {
       anchors[i].onclick = function() {
-        console.log(anchors[i]);
+        addCart();
       };
     }
     
   }
 }
 
-function addCart(item) {
-  // var dataItem = key;
-  //   cart.push(dataItem);
-    console.log( item);
-    // var cartCount = document.querySelector(".cart-count");
-    // cartCount.innerHTML = cart.length;
+function addCart() {
+  var dataItem = key;
+    cart.push(dataItem);
+    console.log(cart);
+    var cartCount = document.querySelector(".cart-count");
+    cartCount.innerHTML = cart.length;
 }
 // var requestURL = "js/goods.json";
 

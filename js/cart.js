@@ -63,28 +63,25 @@ function popularArrivals(jsonObj) {
         </div>
       </div>
     `;
-    item.innerHTML = markup;
+    item.innerHTML = markup;    
+  }
 
-    // Add item to catr
-    
-    var anchors = document.getElementsByClassName("add-cart");
-    console.log(anchors);
-    for(var i = 0; i < anchors.length; i++) {
-      anchors[i].onclick = function() {
-        addCart();
-      };
-    }
-    
+  var cartButtons = document.getElementsByClassName("add-cart");
+  console.log(cartButtons);
+  for(var i = 0; i < cartButtons.length; i++) {
+    cartButtons[i].onclick = function() {
+      addCart(objShoes[this.getAttribute("data-item")]);
+    };
   }
 }
 
-function addCart() {
-  var dataItem = key;
-    cart.push(dataItem);
-    console.log(cart);
-    var cartCount = document.querySelector(".cart-count");
-    cartCount.innerHTML = cart.length;
+function addCart(dataItem) {
+  cart.push(dataItem);
+  console.log('items in cart: ', cart);
+  var cartCount = document.querySelector(".cart-count");
+  cartCount.innerHTML = cart.length.toString();
 }
+
 // var requestURL = "js/goods.json";
 
 // console.log(requestURL)

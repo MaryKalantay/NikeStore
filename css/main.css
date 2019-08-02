@@ -457,7 +457,7 @@ button[disabled]:before {
 
 /* popular list */
 
-.popular-list {
+.popular-list, .cart-list {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -467,7 +467,7 @@ button[disabled]:before {
   padding: 3.2rem 0 0 0;
 }
 
-.popular-list li {
+.popular-item {
   list-style: none;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -509,6 +509,9 @@ button[disabled]:before {
   margin-left: auto;
   margin-right: 10rem;
 }
+.holder-cart:hover {
+  text-decoration: none;
+}
 
 .add-cart {
   display: flex;
@@ -545,6 +548,7 @@ button[disabled]:before {
   font-size: 1.3rem;
   color: #151515;
 }
+
 .cart-count {
   font-weight: bold;
   border-bottom: 1px dashed #111;
@@ -922,7 +926,100 @@ button[disabled]:before {
   transition: all .3s;
 }
 
-/* basket */
+/* cart page */
+.cart {
+  padding-bottom: 3rem;
+}
+
+.cart .section-box {
+  padding-bottom: 2rem;
+  flex-direction: column;
+}
+
+.cart-list {
+  flex-direction: column;
+  width: 100%;
+}
+
+.cart-list .item {
+  width: 100%;
+  position: relative;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cart-list .item picture img {
+  width: 100%;
+  max-width: 260px;
+  background-size: cover;
+}
+
+.cart-list .item-info {
+  width: 100%;
+  margin-left: 30px;
+}
+
+.cart-list .name {
+  font-size: 30px;
+}
+
+.cart-list .name a {
+  transition: all .3s;
+}
+
+.cart-list .name a:hover {
+  text-decoration: none;
+  color: #151515;
+}
+
+.cart-list .price {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.cart-list .quality input {
+ max-width: 60px;
+ padding: 5px 10px;
+ border: 1px solid #ccc;
+}
+
+.cart-list .item .remove {
+  margin-top: 20px;
+  display: flex;
+  color: #ccc;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cart-info {
+  background: #F7F7F7;
+  padding: 1rem 1rem 1rem 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #151515;
+}
+
+.cart-info span {
+  padding-left: 1rem;
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+.btn-order {
+  display: inline-flex;
+  transition: all .3s;
+}
+
+.btn-order:hover {
+  background: #151515;
+  color: white;
+}
+
 
 
 /* ==========================================================================

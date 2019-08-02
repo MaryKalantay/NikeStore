@@ -10,7 +10,7 @@
     <script src="js/js.cookie.js"></script>
   </head>
   <body>
-    <div class="screen-diagonal v-first">
+    <div class=" v-first page-cart">
       <div class="container">
       
       <!-- HEADER -->
@@ -18,15 +18,6 @@
         <a href="index.html" class="logo">
           <img src="img/logo.svg">
         </a>
-
-        <!-- cart -->
-        <div class="holder-cart">
-          Your Cart <span id="cart-count">empty</span>
-        </div>
-        <ul id="goods" class="list-unstyled">
-          <img src="img/loading.gif" alt="" rel="nofollow">
-        </ul>
-        <!-- /. cart -->
 
         <a href="login.html" class="menu">
           <svg width="18" height="15"><use xlink:href="#menu" /></svg>
@@ -36,29 +27,10 @@
 
       <!-- INTRO -->
       <div class="intro">
-        <h1 class="main-title">Your cart</h1>
-        <div class="main-banner">
-            Your Cart <span class="cart-count"></span>
-            <div class="page-cart">           
-              <table class="cart-table">
-                <!-- <thead>
-                  <tr>
-                    <th>Название</th>
-                    <th>Цена</th>
-                    <th>Количество</th>
-                    <th>Сумма</th>
-                    <th></th>
-                  </tr>
-                </thead> -->
-                <!-- <tbody id="cart">
-                  <tr><td colspan="6"><img src="img/loading.gif" alt=""></td></tr>
-                </tbody> -->
-              </table>
-              <div>Итого: $<span id="total-cart-summa">0</span></div>
-              <br>
-              <button id="order" class="btn btn-info">Оформить заказ</button>
+          <h1 class="main-title">Your cart</h1>
+          <h3 class="sub-title">In your cart <span class="cart-count"> </span> goods</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
         </div>
-      </div>
       <!-- /. INTRO -->
       
       </div>
@@ -86,7 +58,26 @@
         </li>    
       </ul>
       <!-- /. social -->
-    </div>
+        <!-- MAIN -->
+        <main>
+
+          <!-- section -->
+          <section class="cart">
+            <div class="container">
+              <div class="section-box">
+                <ul class="cart-list">
+                </ul>
+                <div class="cart-info">
+                  <div class="total">Cумма к оплате:  <span class="cart-total">$ 0</span></div>
+                  <a href="" id="order" class="btn btn-order">Оформить заказ</a>
+                </div>
+            </div>
+          </div>
+          </section>
+          <!-- ./ section -->
+
+        </main>
+        <!-- ./ MAIN -->
   
     <!-- SVG ICONS -->
     <svg display="none" xmlns="http://www.w3.org/2000/svg">

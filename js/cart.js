@@ -1,5 +1,6 @@
 // User Cart
 var cart = [];
+
 var sectionShoes = document.querySelector(".catalog-popular-arrivals");
 
 var objShoes = {
@@ -33,11 +34,14 @@ var objShoes = {
   }
 }
 
-var a = JSON.stringify(objShoes);
-console.log(a);
-var b = JSON.parse(a);
-console.log(b);
-popularArrivals(b);
+var arrString = JSON.stringify(objShoes);
+console.log(arrString);
+var arrObj = JSON.parse(arrString);
+console.log(arrObj);
+checkCart();
+itemsInCart();
+popularArrivals(arrObj);
+
 
 function popularArrivals(jsonObj) {
 
@@ -75,14 +79,65 @@ function popularArrivals(jsonObj) {
   }
 }
 
-function addCart(dataItem) {
-  cart.push(dataItem);
-  console.log('items in cart: ', cart);
+function cartCount() {
+  console.log('cart: ', cart.length);
   var cartCount = document.querySelector(".cart-count");
+  if (cart.length == 0) {
+    cartCount.innerHTML = "empty";
+  }
   cartCount.innerHTML = cart.length.toString();
 }
 
-// var requestURL = "js/goods.json";
+function addCart(dataItem) {
+  cart.push(dataItem);
+  console.log('items in cart: ', cart);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  cartCount();
+  itemsInCart();
+}
+
+function checkCart() {
+    if (  localStorage.getItem("cart") != null ) {
+      cart = JSON.parse(localStorage.getItem("cart"))
+    }
+}
+
+function itemsInCart() {
+  var cartBox = document.querySelector(".cart-list");
+  for(var i = 0; i < cart.length; i++) {
+    console.log('items to page localStorage: ', cart);
+    var cartItem = document.createElement("li");
+    cartItem.classList = "item";
+    cartBox.appendChild(cartItem);
+    var cartMarkup = `
+      <a href="">  
+        <picture>
+          <source type="image/webp" srcset="${cart[i].img}">
+          <source  type="image/jpg" srcset="${cart[i].img}"> 
+          <img src="${cart[i].img}" alt="Popular Arrivals">
+        </picture>
+      </a>
+      <div class="item-info">
+        <div class="name"><a href="#">${cart[i].name}</a></div>
+        <div class="price">$ ${cart[i].price}</div>
+        <div class="quality"><input type="number" value="1"/></div>
+        <a href="#" class="remove">Remove</a>
+      </div>`;
+      cartItem.innerHTML = cartMarkup;
+
+  }
+
+function removeItem() {
+
+}
+
+  cartCount();
+}
+
+
+
+
+
 
 // console.log(requestURL)
 // var request = new XMLHttpRequest();

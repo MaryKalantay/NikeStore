@@ -47,11 +47,11 @@ function registerMessage() {
 } 
 
 // Action btn for registration
-document.querySelector("#registr-submit").addEventListener("click", function(event) {
-  Registration();
-  registerMessage();
-  event.preventDefault();
-}, false);
+// document.querySelector("#registr-submit").addEventListener("click", function(event) {
+//   Registration();
+//   registerMessage();
+//   event.preventDefault();
+// }, false);
 
 
 

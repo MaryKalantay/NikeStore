@@ -513,35 +513,27 @@ button[disabled]:before {
   text-decoration: none;
 }
 
-.add-cart {
+.add-cart, .remove {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.2rem;
   color: white;
-  border: 1px solid #82F4D3;
   background: #82F4D3;
   fill: white;
-  padding: 1rem;
   transition: all .3s;
-  border-radius: 50%;
-  margin-top: -.65rem;
+  padding: 1rem 1.5rem;
+  margin-top: -1.1rem;
 }
 
 .add-cart:hover {
   text-decoration: none;
-  border-color: #82F4D3;
-  background: none;
-  color: #82F4D3;
-  fill: #82F4D3;
+  background: #151515;
 }
 
 .add-cart svg {
-  margin-left: -3px;
-  width: 2rem;
-  height: 2rem;
+  margin-left: -5px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .holder-cart {

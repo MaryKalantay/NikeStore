@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/js.cookie.js"></script>
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script>
   </head>
   <body>
     <div class=" v-first page-cart">
@@ -65,7 +65,7 @@
           <section class="cart">
             <div class="container">
               <div class="section-box">
-                <ul class="cart-list">
+                <ul id="cart-goods" class="cart-list">
                 </ul>
                 <div class="cart-info">
                   <div class="total">Cумма к оплате:  <span class="cart-total">$ 0</span></div>

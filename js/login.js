@@ -27,7 +27,6 @@ function Validation() {
   }
 }
 
-
 document.addEventListener('input', Validation);
 
 // Registration

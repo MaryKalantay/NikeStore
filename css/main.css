@@ -900,6 +900,14 @@ button[disabled]:before {
   display: flex;
 }
 
+.error-message {
+  display: flex;
+  margin-top: -2rem;
+  margin-bottom: .7rem;
+  color: red;
+  display: none;
+}
+
 .inp-group input:first-child {
   margin-right: 1rem;
 }
@@ -980,10 +988,11 @@ button[disabled]:before {
 .cart-list .item .remove {
   margin-top: 20px;
   display: flex;
-  color: #ccc;
+  color: #151515;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
+  width: 100px;
 }
 
 .cart-info {

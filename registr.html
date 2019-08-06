@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/js.cookie.js"></script>
-
   </head>
   <body>
     <div class="screen-diagonal v-three">
@@ -34,15 +32,19 @@
           <form class="registr-form form" action="#">
             <div class="form-fields">
               <div class="col">
-                <div class="inp-group">
+                <div class="">
                   <input class="form-input" value="" name="first_name" type="text" id="first_name" placeholder="First Name" requared/>
-                  <input class="form-input" value="" name="last_name" type="text" id="last_name" placeholder="Last Name" />
+                 <span class="error-message error-name">name is not valid</span> 
+                   <!-- <input class="form-input" value="" name="last_name" type="text" id="last_name" placeholder="Last Name" />
+                  <span class="error-message">name is not valid</span> -->
                 </div>
                 <input class="form-input" value="" name="email" type="email" id="email" placeholder="E-mail" requared/>
+                <span class="error-message">email is not valid</span>
               </div>
               <div class="col">
                 <input class="form-input" value="" name="pass_1" type="password" id="password_1" placeholder="Password" requared/>
                 <input class="form-input" value="" name="pass_2" type="password" id="password_2" placeholder="Confirm Password" requared/>
+                <span class="error-message">passwords do not match</span>
               </div>
             </div>
             <button type="submit" class="btn btn-lg" id="registr-submit" disabled="disabled">Registration</button>
@@ -123,6 +125,6 @@
     </svg>     
     <!-- /. SVG ICONS -->
 
-    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>

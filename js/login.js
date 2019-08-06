@@ -11,20 +11,37 @@ console.log(new_user);
 // Validation
 function Validation() {
   var first_name = document.querySelector(".form-input[name=first_name]").value;
-  var last_name = document.querySelector(".form-input[name=last_name]").value;
-  var email = document.querySelector(".form-input[name=email]").value;
+  // var last_name = document.querySelector(".form-input[name=last_name]").value;
+  var user_email = document.querySelector(".form-input[name=email]").value;
   var password_1 = document.querySelector(".form-input[name=pass_1]").value;
   var password_2 = document.querySelector(".form-input[name=pass_2").value;
 
-  if (   (first_name != "") && (last_name != "") && (email != "") && (password_1 != "") && (password_2 != "")  ) {
-     if ( password_1 == password_2 ) {
-      document.getElementById("registr-submit").removeAttribute("disabled", "");
-      console.log("name is correct");
-     }
-     else {
-      document.getElementById("registr-submit").setAttribute("disabled", "disabled");
-    }
+  if (validateEmail(user_email)) {
+    document.querySelector(".sucs-email").style.display = "flex";
+    document.querySelector(".error-email").style.display = "none";
   }
+  else {
+    document.querySelector(".error-email").style.display = "flex";
+    document.querySelector(".sucs-email").style.display = "none";
+  }
+  disabledBtn();
+}
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function disabledBtn() {
+  if ( (first_name != "") && (last_name != "") && (email != "") && (password_1 != "") && (password_2 != "")  ) {
+    if ( password_1 == password_2 ) {
+     document.getElementById("registr-submit").removeAttribute("disabled", "");
+     console.log("name is correct");
+    }
+    else {
+     document.getElementById("registr-submit").setAttribute("disabled", "disabled");
+   }
+ }
 }
 
 document.addEventListener('input', Validation);

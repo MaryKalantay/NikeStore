@@ -908,6 +908,14 @@ button[disabled]:before {
   display: none;
 }
 
+.sucs-message {
+  display: flex;
+  margin-top: -2rem;
+  margin-bottom: .7rem;
+  color: green;
+  display: none;
+}
+
 .inp-group input:first-child {
   margin-right: 1rem;
 }

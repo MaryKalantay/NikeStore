@@ -9,40 +9,54 @@ let new_user = {
 console.log(new_user);
 
 // Validation
-function Validation() {
-  var first_name = document.querySelector(".form-input[name=first_name]").value;
-  // var last_name = document.querySelector(".form-input[name=last_name]").value;
-  var user_email = document.querySelector(".form-input[name=email]").value;
-  var password_1 = document.querySelector(".form-input[name=pass_1]").value;
-  var password_2 = document.querySelector(".form-input[name=pass_2").value;
 
-  if (validateEmail(user_email)) {
-    document.querySelector(".sucs-email").style.display = "flex";
-    document.querySelector(".error-email").style.display = "none";
-  }
-  else {
-    document.querySelector(".error-email").style.display = "flex";
-    document.querySelector(".sucs-email").style.display = "none";
-  }
+
+
+function Validation() {
   disabledBtn();
 }
 
-function validateEmail(email) {
-  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
-}
 
 function disabledBtn() {
-  if ( (first_name != "") && (last_name != "") && (email != "") && (password_1 != "") && (password_2 != "")  ) {
-    if ( password_1 == password_2 ) {
+  let first_name = document.querySelector(".form-input[name=first_name]").value;
+  let user_email = document.querySelector(".form-input[name=email]").value;
+  let password_1 = document.querySelector(".form-input[name=pass_1]").value;
+  let password_2 = document.querySelector(".form-input[name=pass_2").value;
+  
+  if ( (first_name != "") && ( validateEmail(user_email) ) && ( validatePass(password_1, password_2) ) ) {
      document.getElementById("registr-submit").removeAttribute("disabled", "");
-     console.log("name is correct");
     }
     else {
      document.getElementById("registr-submit").setAttribute("disabled", "disabled");
    }
- }
 }
+
+function validatePass(pass1, pass2) {
+  if ( (pass1 != "") && (pass2 != "") ) {
+    if ( pass1 == pass2 ) {
+      document.querySelector(".success-pass").style.display = "flex";
+      document.querySelector(".error-pass").style.display = "none";
+    }
+    else {
+      document.querySelector(".error-pass").style.display = "flex";
+      document.querySelector(".success-pass").style.display = "none";  
+    }
+  }
+}
+
+
+function validateEmail(email) {
+  let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (re.test(email)) {
+    document.querySelector(".success-email").style.display = "flex";
+    document.querySelector(".error-email").style.display = "none";
+  }
+  else {
+    document.querySelector(".error-email").style.display = "flex";
+    document.querySelector(".success-email").style.display = "none";
+  }
+}
+
 
 document.addEventListener('input', Validation);
 
@@ -68,3 +82,4 @@ document.querySelector("#registr-submit").addEventListener("click", function(eve
   registerMessage();
   event.preventDefault();
 }, false);
+

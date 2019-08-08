@@ -908,7 +908,7 @@ button[disabled]:before {
   display: none;
 }
 
-.sucs-message {
+.success-message {
   display: flex;
   margin-top: -2rem;
   margin-bottom: .7rem;

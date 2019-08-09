@@ -1,45 +1,37 @@
-
-checkCart();
-cartCount();
-itemsInCart();
-
-
-function checkCart() {
-  if (  localStorage.getItem("cart") != null ) {
-    cart = JSON.parse(localStorage.getItem("cart"))
-  }
+let cart = JSON.parse(localStorage.getItem("cart"));
+if (cart === null) {
+    cart = {};
 }
+console.log('cart: ', cart);
 
-function cartCount() {
-  console.log('cart: ', cart.length);
-  var cartCount = document.querySelector(".cart-count");
-  if (cart.length == 0) {
-    cartCount.innerHTML = "empty";
-  }
-  cartCount.innerHTML = cart.length.toString();
-}
+showShoesInTheCart();
 
-function itemsInCart() {
-  var cartBox = document.querySelector(".cart-list");
-  for(var i = 0; i < cart.length; i++) {
-    console.log('items to page localStorage: ', cart);
-    var cartItem = document.createElement("li");
-    cartItem.classList = "item";
-    cartBox.appendChild(cartItem);
-    var cartMarkup = `
-      <a href="">  
-        <picture>
-          <source type="image/webp" srcset="${cart[i].img}">
-          <source  type="image/jpg" srcset="${cart[i].img}"> 
-          <img src="${cart[i].img}" alt="Popular Arrivals">
-        </picture>
-      </a>
-      <div class="item-info">
-        <div class="name"><a href="#">${cart[i].name}</a></div>
-        <div class="price">$ ${cart[i].price}</div>
-        <div class="quality"><input type="number" value="1"/></div>
-        <a href="#" class="remove">Remove</a>
-      </div>`;
-      cartItem.innerHTML = cartMarkup;
+function showShoesInTheCart(shoes) {
+  if (cart !== null) {
+    let shoesInCart = document.querySelector(".cart-list");
+    for (const key in cart) {
+      if (cart.hasOwnProperty(key)) {
+        shoesInCart.insertAdjacentHTML('afterbegin', `
+       <li class="item">
+          <a href="">  
+            <picture>
+              <source type="image/webp" srcset="${cart[key].img}">
+              <source  type="image/jpg" srcset="${cart[key].img}"> 
+              <img src="${cart[key].img}" alt="Popular Arrivals">
+            </picture>
+          </a>
+          <div class="item-info">
+            <div class="name"><a href="#">${cart[key].name}</a></div>
+            <div class="price">$ ${cart[key].price}</div>
+            <div class="quality"><input type="number" value="1"/></div>
+            <a href="#" class="remove">Remove</a>
+          </div>
+        </li>
+        `);
+      }
     }
+  }
 }
+
+
+

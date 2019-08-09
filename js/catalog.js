@@ -30,6 +30,9 @@ const shoes = {
 };
 
 let cart = JSON.parse(localStorage.getItem("cart"));
+if (cart === null) {
+    cart = {};
+}
 console.log('cart: ', cart);
 
 popularArrivals(shoes);
@@ -54,7 +57,7 @@ function popularArrivals(popularShoes) {
                         <div class="name">
                             <a href="${popularShoes[key].link}">${popularShoes[key].name}</a> 
                             <span class="outdoors">Shop Outdoors</span>
-                        </div>
+                        </div>f
                         <div class="price" id="${key}">
                             $ ${popularShoes[key].price}                
                         </div>
@@ -137,5 +140,3 @@ function isShoeInTheCart(shoeKey) {
         return false;
     }
 }
-
-

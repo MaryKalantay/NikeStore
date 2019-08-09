@@ -41,6 +41,7 @@ function validatePass(pass1, pass2) {
       document.querySelector(".error-pass").style.display = "flex";
       document.querySelector(".success-pass").style.display = "none";  
     }
+    return true
   }
 }
 

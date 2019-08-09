@@ -488,9 +488,10 @@ button[disabled]:before {
   display: flex;
   flex-direction: column;
 }
-
+ 
 .popular-info .name a {
   color: #151515;
+  font-size: 30px;
 }
 
 .popular-info .price {
@@ -548,7 +549,7 @@ button[disabled]:before {
 
 .popular-info .outdoors {
   color: #888888;
-  padding-left: 2rem;
+  display: flex;
 }
 
 .popular-item picture {
@@ -969,12 +970,9 @@ button[disabled]:before {
   margin-left: 30px;
 }
 
-.cart-list .name {
-  font-size: 30px;
-}
-
 .cart-list .name a {
   transition: all .3s;
+  font-size: 30px;
 }
 
 .cart-list .name a:hover {
